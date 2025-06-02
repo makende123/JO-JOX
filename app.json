@@ -1,0 +1,36 @@
+{
+  "name": "Jo-jox",
+  "description": "Jo-jox, your friendly assistant!",
+  "keywords": [],
+  "repository": "https://github.com/makende123/Jo-jox",
+  "stack": "container",
+  "addons": [
+    {
+      "plan": "heroku-postgresql"
+    }
+  ],
+  "scripts": {
+    "start": "node index.js"
+  },
+"env": {
+  "SESSION_ID": {
+    "description": "jo-jox-BOT:~ or 'Jo-howler:~'.",
+    "value": "",
+    "required": false
+  }
+},
+  "buildpacks": [
+    {
+      "url": "heroku/nodejs"
+    },
+    {
+      "url": "https://github.com/DuckyTeam/heroku-buildpack-imagemagick.git"
+    },
+    {
+      "url": "https://github.com/jonathanong/heroku-buildpack-ffmpeg-latest"
+    },
+    {
+      "url": "https://github.com/clhuang/heroku-buildpack-webp-binaries.git"
+    }
+  ]
+}
